@@ -1,20 +1,35 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
 import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Custom SplitText alternative
+const splitText = (selector) => {
+    const element = document.querySelector(selector);
+    if (!element) return { words: [] };
+
+    const text = element.innerText;
+    element.innerHTML = "";
+
+    const words = text.split(" ").map((word) => {
+        const span = document.createElement("span");
+        span.innerHTML = word + "&nbsp;";
+        span.style.display = "inline-block";
+        element.appendChild(span);
+        return span;
+    });
+
+    return { words };
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     const lenis = new Lenis();
     lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => lenis.raf(time *1000));
+    gsap.ticker.add((time) => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
 
-    const heroCopySplit = SplitText.create(".hero-copy h3", {
-        type: "words",
-        wordsClass: "word",
-    });
+    const heroCopySplit = splitText(".hero-copy h3");
 
     let isHeroCopyHidden = false;
 
