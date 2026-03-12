@@ -20,7 +20,6 @@ img {
 h1,
 h3 {
     font-weight: 400;
-    letter-spacing: -0.5rem;
     line-height: 1;
 }
 
@@ -38,8 +37,8 @@ section {
     height: 100svh;
 }
 
-.hero-img, 
-.hero-header, 
+.hero-img,
+.hero-header,
 .hero-copy {
     position: absolute;
     width: 100%;
