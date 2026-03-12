@@ -31,6 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const heroCopySplit = splitText(".hero-copy h3");
 
+    // Dynamically generate images for the About section
+    const columns = document.querySelectorAll(".about-imgs-col");
+    columns.forEach((col, colIndex) => {
+        for (let i = 1; i <= 4; i++) {
+            const imgNum = colIndex * 4 + i;
+            const imgDiv = document.createElement("div");
+            imgDiv.className = "img";
+            imgDiv.innerHTML = `<img src="/img${imgNum}.jpg" alt="" />`;
+            col.appendChild(imgDiv);
+        }
+    });
+
     let isHeroCopyHidden = false;
 
     ScrollTrigger.create({
