@@ -146,15 +146,11 @@ section {
 
 @media (max-width: 1000px) {
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     h3 {
-        font-size: 2rem;
-    }
-
-    .hero {
-        z-index: 2;
+        font-size: 1.75rem;
     }
 
     .hero-header,
@@ -167,21 +163,53 @@ section {
         width: 100%;
     }
 
+    .about {
+        margin-top: 150svh; /* Reduced from 275svh for mobile */
+    }
+
+    .about-images {
+        padding: 2rem 1rem;
+    }
+
     .about-header,
     .outro h3 {
-        width: 100%;
-        padding: 2rem;
+        width: 90%;
+        padding: 0;
     }
 
     .about-imgs-col .img {
-        width: 75px;
-        height: 75px;
-        opacity: 0.25;
-        filter: saturate(0)
+        width: 60px;
+        height: 60px;
+        opacity: 0.3;
+        filter: saturate(0);
     }
 
+    /* Reset all columns for mobile to prevent elements from being pushed off-screen */
+    #about-imgs-col-1,
+    #about-imgs-col-2,
+    #about-imgs-col-3,
+    #about-imgs-col-4 {
+        transform: translate(0, 250px);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .about-imgs-col .img {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Hide middle columns on very small screens to avoid clutter */
     #about-imgs-col-2,
     #about-imgs-col-3 {
-        transform: translateX(0px) translateY(500px);
+        display: none;
     }
 }
