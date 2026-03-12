@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const wordOpacity = Math.max(
                     0,
                     Math.min((heroWordsProgress - wordStart) / (wordEnd - wordStart),
-                    1),
+                        1),
                 );
-                 gsap.set(word, { opacity: wordOpacity });
+                gsap.set(word, { opacity: wordOpacity });
             });
 
             if (progress > 0.64 && !isHeroCopyHidden) {
