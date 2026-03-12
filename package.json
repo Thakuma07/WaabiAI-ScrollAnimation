@@ -1,0 +1,28 @@
+{
+  "name": "waabi-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thakuma07/WaabiAI-ScrollAnimation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Thakuma07/WaabiAI-ScrollAnimation/issues"
+  },
+  "homepage": "https://github.com/Thakuma07/WaabiAI-ScrollAnimation#readme",
+  "dependencies": {
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.18",
+    "vite": "^7.3.1"
+  }
+}
