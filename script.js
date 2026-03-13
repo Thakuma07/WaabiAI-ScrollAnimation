@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const imgNum = colIndex * 4 + i;
             const imgDiv = document.createElement("div");
             imgDiv.className = "img";
-            imgDiv.innerHTML = `<img src="/img${imgNum}.jpg" alt="" />`;
+            imgDiv.innerHTML = `<img src="./assets/img${imgNum}.jpg" alt="" />`;
             col.appendChild(imgDiv);
         }
     });
