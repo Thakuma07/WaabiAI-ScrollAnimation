@@ -1,5 +1,7 @@
 # Waabi AI - Image Scroll Animation
 
+![Website Preview](./assets/Screenshot%202026-03-16%20144715.png)
+
 A premium, high-performance scroll animation project inspired by Waabi AI. This project uses **Vite** for the build tool, **GSAP** for sophisticated animations, and **Lenis** for ultra-smooth scrolling.
 
 ## ✨ Features
