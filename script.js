@@ -32,13 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroCopySplit = splitText(".hero-copy h3");
 
     // Dynamically generate images for the About section
+    const images = import.meta.glob('./assets/img*.jpg', { eager: true, import: 'default' });
     const columns = document.querySelectorAll(".about-imgs-col");
     columns.forEach((col, colIndex) => {
         for (let i = 1; i <= 4; i++) {
             const imgNum = colIndex * 4 + i;
+            const imgPath = `./assets/img${imgNum}.jpg`;
+            const imgUrl = images[imgPath] || imgPath;
             const imgDiv = document.createElement("div");
             imgDiv.className = "img";
-            imgDiv.innerHTML = `<img src="./assets/img${imgNum}.jpg" alt="" />`;
+            imgDiv.innerHTML = `<img src="${imgUrl}" alt="" />`;
             col.appendChild(imgDiv);
         }
     });
